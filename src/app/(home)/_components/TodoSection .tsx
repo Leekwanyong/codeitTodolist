@@ -78,7 +78,7 @@ export default function TodoSection({
                                 <button
                                     type="button"
                                     onClick={() => setIsEditing(true)}
-                                    className="font-bold underline "
+                                    className="font-bold underline cursor-pointer"
                                 >
                                     {todo.name}
                                 </button>
@@ -113,7 +113,7 @@ export default function TodoSection({
                             key={todo.id}
                             onClick={() => router.push(`/todo/${todo.id}`)}
                             className={`${
-                                todo.isCompleted && "bg-[#EDE9FE]"
+                                todo.isCompleted && "bg-[#EDE9FE] line-through"
                             } flex items-center gap-4 py-2 border-[var(--color-slate900)] border-2 rounded-[27px] pl-4 cursor-pointer`}
                         >
                             <CheckInput
