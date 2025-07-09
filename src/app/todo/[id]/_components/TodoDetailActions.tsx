@@ -30,7 +30,7 @@ export default function TodoDetailActions({
     loading: { removeLoading, updateLoading, uploadLoading },
 }: TodoDetailActionsProps) {
     return (
-        <article className="px-4 tablet:px-4 laptop:px-0 desktop:px-0">
+        <article className="px-4 tablet:px-4 desktop:px-0">
             <div className="grid grid-cols-1 laptop:grid-cols-2 gap-4 desktop:gap-6 w-full mt-6">
                 <div className="relative w-full aspect-[400/311] desktop:aspect-[588/311] flex flex-col items-center justify-center bg-[#f8fafc] border border-dashed border-slate-300 rounded-3xl">
                     {uploadImgUrl || todoImgUrl ? (

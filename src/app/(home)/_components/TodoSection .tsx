@@ -50,7 +50,7 @@ export default function TodoSection({
                             key={todo.id}
                             className={`${
                                 todo.isCompleted && "bg-[#DDD6FE] "
-                            } flex items-center justify-center gap-4 py-2 border-[var(--color-slate900)] border-2 rounded-[27px]`}
+                            }  flex items-center justify-center gap-4 py-2 border-[var(--color-slate900)] border-2 rounded-[27px]`}
                         >
                             <CheckInput
                                 onClick={(e) => e.stopPropagation()}

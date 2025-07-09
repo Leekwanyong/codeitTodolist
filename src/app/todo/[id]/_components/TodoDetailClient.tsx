@@ -118,7 +118,7 @@ export default function TodoDetailClient({ initialTodo }: TodoDetailClientProps)
 
     return (
         <article className="px-4 tablet:px-4 laptop:px-0 desktop:px-0 mt-6">
-            <ul>
+            <ul className="px-4 tablet:px-4 desktop:px-0">
                 <TodoSection list={[todo]} onlyListItem getTodos={getTodo} onUpdateTodo={onUpdateTodo} />
             </ul>
 
