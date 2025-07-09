@@ -30,7 +30,7 @@ export default function TodoDetailClient({ initialTodo }: TodoDetailClientProps)
         setMemo(e.target.value);
     }, []);
 
-    // TodoDetail 조회
+    // TodoDetail 조회!
     const getTodo = useCallback(async () => {
         const data = await fetchTodo(todo?.id);
         setTodo(data);

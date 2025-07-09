@@ -6,7 +6,7 @@ interface TodoListProps {
     getTodos: () => void;
 }
 
-// 전체 투두 목록을 미완료/완료로 분리하여 각각 보여주는 리스트 컴포넌트
+// 전체 투두 목록을 미완료/완료로 분리하여 각각 보여주는 리스트 컴포넌트!
 export default function TodoList({ todos, getTodos }: TodoListProps) {
     // 할일 완료한 할일 배열로 분리하여 관리
     const todo: TodoResponse[] = [];
