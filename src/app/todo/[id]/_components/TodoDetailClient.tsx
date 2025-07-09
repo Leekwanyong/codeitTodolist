@@ -41,8 +41,12 @@ export default function TodoDetailClient({ initialTodo }: TodoDetailClientProps)
         try {
             await removeTodo(todo?.id);
             router.push("/");
-        } catch (e) {
-            alert(`할 일을 불러오는 중 오류 발생: ${e}`);
+        } catch (e: Error | unknown) {
+            if (e instanceof Error) {
+                alert(`할 일을 불러오는 중 오류 발생: ${e.message}`);
+            } else {
+                alert("할 일을 불러오는 중 오류 발생");
+            }
         }
     }, [removeTodo, todo?.id, router]);
 
@@ -69,8 +73,12 @@ export default function TodoDetailClient({ initialTodo }: TodoDetailClientProps)
                 setUploadImgUrl(result?.url);
                 await updateTodo({ itemId: todo?.id, imageUrl: result?.url });
                 setTodo({ ...todo, imageUrl: result?.url });
-            } catch (e) {
-                alert(`이미지 업로드 실패: ${e}`);
+            } catch (e: Error | unknown) {
+                if (e instanceof Error) {
+                    alert(`이미지 업로드 실패: ${e.message}`);
+                } else {
+                    alert("이미지 업로드 실패");
+                }
             }
         },
         [todo, updateTodo, uploadImage]
@@ -97,8 +105,12 @@ export default function TodoDetailClient({ initialTodo }: TodoDetailClientProps)
                     await updateTodo({ itemId: todo.id, memo });
                     router.push("/");
                 }
-            } catch (e) {
-                alert(`수정 중 오류 발생: ${e}`);
+            } catch (e: Error | unknown) {
+                if (e instanceof Error) {
+                    alert(`수정 중 오류 발생: ${e.message}`);
+                } else {
+                    alert("수정 중 오류 발생");
+                }
             }
         },
         [todo, updateTodo, getTodo, router]

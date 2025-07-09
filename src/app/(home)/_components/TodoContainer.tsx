@@ -22,8 +22,12 @@ export default function TodoContainer() {
         try {
             const data = await fetchTodo();
             setTodos(data);
-        } catch (e) {
-            alert(`할 일을 불러오는 중 네트워크 오류가 발생했습니다! ${e}`);
+        } catch (e: Error | unknown) {
+            if (e instanceof Error) {
+                alert(`할 일을 불러오는 중 네트워크 오류가 발생했습니다! ${e.message}`);
+            } else {
+                alert(`할 일을 불러오는 중 네트워크 오류가 발생했습니다!`);
+            }
         }
     }, [fetchTodo]);
 
@@ -39,8 +43,12 @@ export default function TodoContainer() {
                 await updateTodo(value);
                 setValue("");
                 await getTodos();
-            } catch (e) {
-                alert(`네트워크 오류가 발생했습니다.${e}`);
+            } catch (e: Error | unknown) {
+                if (e instanceof Error) {
+                    alert(`네트워크 오류가 발생했습니다. ${e.message}`);
+                } else {
+                    alert("네트워크 오류가 발생했습니다.");
+                }
             }
         },
         [getTodos, updateTodo, value]
