@@ -60,7 +60,7 @@ export default function TodoDetailActions({
                             src={
                                 uploadImgUrl || todoImgUrl
                                     ? "/assets/icons/edit.svg"
-                                    : "/assets/icons/Property 1=Variant2.svg"
+                                    : "/assets/icons/Property1=Variant2.svg"
                             }
                             width={24}
                             height={24}

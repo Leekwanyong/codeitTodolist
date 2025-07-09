@@ -26,7 +26,7 @@ export default function TodoList({ todos, getTodos }: TodoListProps) {
                 <TodoSection
                     list={todo}
                     titleImg="/assets/todo/todo.svg"
-                    emptyImg="/assets/empty/Type=Todo, Size=Large.svg"
+                    emptyImg="/assets/empty/Type=TodoSize=Large.svg"
                     emptyAlt="할일 목록이 없어요!"
                     onlyListItem={false}
                     getTodos={getTodos}
@@ -34,7 +34,7 @@ export default function TodoList({ todos, getTodos }: TodoListProps) {
                 <TodoSection
                     list={done}
                     titleImg="/assets/todo/done.svg"
-                    emptyImg="/assets/empty/Type=done, Size=Large.svg"
+                    emptyImg="/assets/empty/Type=doneSize=Large.svg"
                     emptyAlt="완료된 항목이 없어요!"
                     onlyListItem={false}
                     getTodos={getTodos}
