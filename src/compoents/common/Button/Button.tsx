@@ -23,7 +23,7 @@ const shapeClassMap = {
     circle: "rounded-full",
     default: "rounded-3xl",
 };
-// 보더 컬러
+// 버튼 색상상
 const buttonColorMap = {
     primary: {
         primary: "bg-primary600",
