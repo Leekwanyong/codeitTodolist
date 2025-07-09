@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     };
 }
 
-export default async function TodoDetailPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = await params;
+export default async function TodoDetailPage({ params }: { params: { id: string } }) {
+    const { id } = params;
     const todo = await fetchDetailTodos(Number(id));
     return <TodoDetailClient initialTodo={todo} />;
 }
