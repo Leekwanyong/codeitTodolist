@@ -4,7 +4,7 @@ import TodoDetailClient from "./_components/TodoDetailClient";
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const todo = await fetchDetailTodos(Number(params.id));
     return {
-        title: `${todo.name} | Codeit TodoList`,
+        title: `${todo.name} | Codeit TodoList!`,
         description: todo.memo || "할 일 상세 정보",
     };
 }
