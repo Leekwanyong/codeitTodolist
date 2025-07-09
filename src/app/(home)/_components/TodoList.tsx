@@ -34,7 +34,7 @@ export default function TodoList({ todos, getTodos }: TodoListProps) {
                 <TodoSection
                     list={done}
                     titleImg="/assets/todo/done.svg"
-                    emptyImg="/assets/empty/Type=doneSize=Large.svg"
+                    emptyImg="/assets/empty/Type=DoneSize=Large.svg"
                     emptyAlt="완료된 항목이 없어요!"
                     onlyListItem={false}
                     getTodos={getTodos}

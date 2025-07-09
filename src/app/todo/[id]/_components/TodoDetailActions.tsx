@@ -121,7 +121,7 @@ export default function TodoDetailActions({
                     className="text-white"
                     onClick={onDelete}
                 >
-                    <Image src="/assets/icons/x.svg" width={16} height={16} alt="삭제" />
+                    <Image src="/assets/icons/X.svg" width={16} height={16} alt="삭제" />
                     삭제 하기
                 </Button>
             </div>
